@@ -1,0 +1,687 @@
+:root{
+    --Cool-gray: hsl(231, 11%, 63%);
+    --Light-gray: hsl(229, 24%, 87%);
+    --Magnolia: hsl(217, 100%, 97%);
+    --Alabaster: hsl(231, 100%, 99%);
+    --White: hsl(0, 0%, 100%);
+
+    --Marine-blue: hsl(213, 94%, 28%);
+    --Purplish-blue: hsl(243, 100%, 62%);
+    --Pastel-blue: hsl(228, 100%, 84%);
+    --Light-blue: hsl(206, 94%, 87%);
+    --Strawberry-red: hsl(354, 84%, 57%);
+}
+
+
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--Light-gray);
+    height: 100vh;
+}
+
+/*Main Container*/
+.form-container{
+    display: flex;
+    background-color: var(--White);
+    padding: 15px 15px;
+    border-radius: 5px;
+    min-width: 800px;
+    
+    position: relative;
+}
+
+/*Progress Status Styling*/
+.progress-wrapper{
+    margin-right: 55px;
+    position: relative;
+    
+}
+
+.progress-step-wrapper{
+    
+    position: absolute;
+    top: 10%;
+    left: 30%;
+}
+
+.progress-step{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 25px;
+
+}
+
+.progress-step-circle{
+    position: absolute;
+    left: -45px;
+    color: white;
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid 1px;
+
+}
+
+
+  
+
+
+.progress-step-number-active{
+    position: absolute;
+    left: -45px;
+    color: black;
+    background-color: var(--Light-blue);
+    height: 35px;
+    width: 35px;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.step-number{
+    color: var(--Cool-gray);
+    margin-bottom: 5px;
+}
+
+.step-description{
+    color: var(--White);
+}
+/*
+.progress-indicator{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    justify-content: space-between;
+    top: 5%;
+    left: -25%;
+}
+*/
+/*
+.progress-indicator-active{
+    position: absolute;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 5%;
+    left: -35%;
+    background-color: var(--Pastel-blue);
+    border-radius: 50%;
+    height: 25px;
+    width: 28px;
+}
+*/
+
+/*Form Styling*/
+
+/*form step 1*/
+.form-step{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+form .error {
+    display: none;
+    color: var(--Strawberry-red);
+    font-size: 0.9rem;
+    font-weight: 700;
+  }
+
+  .plan-error {
+    display: none;
+    color: var(--Strawberry-red);
+    font-size: 0.9rem;
+    font-weight: 700;
+  }
+
+.form-step1 form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+/*form step 2*/
+.form-step2{
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+/*form step 3*/
+.form-step3{
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+}
+/*form step 4*/
+.form-step4{
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/*form step 5*/
+.form-step5{
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 75px;
+}
+
+
+.form-step-title{
+    margin-bottom: 0;
+}
+
+.form-step-description{
+    margin-top: 15px;
+}
+
+input{
+    padding: 5px 5px;
+    border-radius: 5px;
+    border: solid .015rem black;
+    width: 300px;
+}
+
+input:valid{
+    border: 1px solid green;
+}
+
+/*
+input:invalid{
+    border: 1px solid red;
+}
+*/
+/*Cards*/
+.card-wrapper{
+    border: solid 1px var(--Light-gray);
+    border-radius: 5px;
+    width: 125px;
+    height: 170px;
+    background-color: white;
+}
+
+.card-wrapper:hover{
+    cursor: pointer;
+}
+
+.selected{
+    border-color: var(--Marine-blue);
+}
+
+.card-row{
+   display: flex;
+   justify-content: space-between;
+   width: 400px;
+   margin-top: 25px;
+}
+
+.card-img{
+    margin-top: 18px;
+    margin-left: 12px;
+}
+
+.card-title{
+    margin-top: 45px;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.yearly-price{
+    display: none;
+}
+
+.card-price{
+    text-align: center;
+}
+
+.card-title, .card-price{
+    margin-left: 12px;
+    text-align: center;
+}
+
+/*Toggle Switch- the box around the slider*/
+.switch{
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.toggle-switch-container{
+   background-color:var(--Magnolia);
+   width: 320px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-top: 50px;
+   margin-left: auto;
+   margin-right: auto;
+   border-radius: 5px;
+}
+
+/*Hide default checkbox*/
+.switch input{
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/*The slider*/
+.slider{
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--Marine-blue);
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;}
+/*Monthly and yearly */
+.monthly{
+    margin-right: 5px;
+}
+
+.yearly{
+    margin-left: 5px;
+}
+
+/*Add on cards form 3*/
+.add-on-card{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 375px;
+    border: solid 1px var(--Marine-blue);
+    padding: 10px 5px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    background-color: var(--Magnolia);
+    margin-top: 15px;
+}
+
+.plan-column{
+    display: flex;
+    flex-direction: column;
+    margin-left: 0;
+}
+
+#online{
+    width: 50px;
+    margin-right: 0;
+}
+
+.add-on-title{
+    color: black;
+    font-weight: bold;
+}
+
+.add-on-description{
+    color: var(--Cool-gray)
+}
+
+.add-on-cost-per-month{
+    color: var(--Marine-blue)
+}
+
+.total-wrapper{
+   display: flex;
+   justify-content: space-between;
+   margin-top: 15px;
+}
+
+#total-price{
+    margin-left: 8px;
+    font-weight: bold;
+    color: var(--Purplish-blue)
+}
+
+/*Confirm plan page*/
+.confirm-services-wrapper{
+    position: relative;
+    background-color: var(--Alabaster);
+}
+
+.plan-price{
+    position: absolute;
+    right: 15px;
+    top: 8px;
+    font-weight: bold;
+    color: var(--Marine-blue);
+}
+
+.plan-selected{
+    margin-bottom: 0;
+    color: var(--Marine-blue)
+}
+
+.add-on-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+
+
+
+
+
+/*Confirmation Page*/
+.checkmark-img{
+    width: 150px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.confirmation-message{
+    width: 50ch;
+   text-align: center;
+}
+
+.final-step-h1{
+    text-align: center;
+}
+
+/*Buttons*/
+.btn-container{
+   position: absolute;
+   top: 450px;
+   left: 550px;
+}
+
+.next-btn{
+    background-color: var(--Marine-blue);
+    color: white;
+    border: none;
+    padding: 15px 15px;
+    border-radius: 5px;
+    width: 85px;
+    cursor: pointer;
+    margin-left: 75px;
+}
+
+.back-btn{
+    color:var(--Cool-gray);
+    border: none;
+    width: 85px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-right: 25px;
+}
+
+.sidebar{
+    display: none;
+}
+
+@media screen and (max-width: 768px){
+    .form-container{
+        display: flex;
+        flex-direction: column;
+        background-color: var(--White);
+        border-radius: 5px;
+        min-width: 400px;
+        position: relative;
+        min-height: 810px;
+        padding: 0;
+        
+    }
+
+   
+    
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--Light-gray);
+    position: relative;
+    height: 100vh;
+}
+
+    .form-step{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+
+    .form-step2{
+        display: none;
+    }
+
+    /*Form 2 cards*/
+    .card-row{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        
+     }
+
+     .card-wrapper{
+        border: solid 1px var(--Light-gray);
+        border-radius: 5px;
+        width: 300px;
+        height: 100px;
+        background-color: white;
+        margin-bottom: 5px;
+    }
+
+    .card-img{
+        float: left;
+    }
+    
+    .card-title{
+        margin-top: 5px;
+        margin-right: 150px;
+        text-align: center;
+    }
+
+    .card-price{
+        margin-right: 150px;
+    }
+
+    .toggle-switch-container{
+        background-color:var(--Magnolia);
+        width: 320px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 5px;
+     }
+
+    .form-step3{
+        display: none;
+    }
+
+    .form-step4{
+        display: none;
+    }
+
+    .form-step5{
+        display: none;
+    }
+
+/*Progress bar*/
+    .progress-step-number-active{
+        position: absolute;
+        left: -45px;
+        color: black;
+        background-color: var(--Light-blue);
+        height: 35px;
+        width: 35px;
+        border: none;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    img.sidebar{
+        width: 100%;
+        display: block;
+     
+        
+    }
+
+    .desktop{
+        display: none;
+    }
+
+    .progress-wrapper{
+        width: 100%;
+        
+        
+    }
+
+   
+    .progress-step-wrapper{
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 40%;
+        left: 28%;
+    }
+
+    
+
+  
+
+    .step-number{
+        color: var(--Cool-gray);
+        margin-bottom: 5px;
+        
+    }
+    
+    .progress-step{
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+        .progress-step-circle{
+            position: relative;
+            top: -15px;
+            left: 15px;
+            color: white;
+            height: 35px;
+            width: 35px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: solid 1px;
+            margin-left: 8px;
+            margin-right: auto;
+        
+    }
+
+    .step-number,.step-description{
+        display: none;
+    }
+
+    .progress-step-number-active{
+        position: relative;
+        top: -15px;
+        color: black;
+        background-color: var(--Light-blue);
+        height: 35px;
+        width: 35px;
+        border: none;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .selected{
+        border-color: var(--Marine-blue);
+    }
+
+    /*Summary Form*/
+    .confirm-services-wrapper{
+        width: 350px;
+    }
+    /*Button Styling*/
+
+    .btn-container {
+        position: absolute;
+        top: 550px;
+        left: 100px;
+      }
+      
+
+      .next-btn{
+        background-color: var(--Marine-blue);
+        color: white;
+        border: none;
+        padding: 15px 15px;
+        border-radius: 5px;
+        width: 85px;
+        cursor: pointer;
+        margin-left: 55px;
+    }
+    
+    .back-btn{
+        color:var(--Cool-gray);
+        border: none;
+        width: 65px;
+        cursor: pointer;
+        font-weight: bold;
+        margin-right: 5px;
+    }  
+   
+}

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Multi Step Form</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+
+        <div class="form-container">
+            <div class="progress-wrapper">
+                <img class="desktop" src="assets/bg-sidebar-desktop.svg" alt="graphic">
+                <img class="sidebar" src="assets/bg-sidebar-mobile.svg">
+                    <div class="progress-step-wrapper">
+                        <div class="progress-step">
+                            <div class="progress-step-circle progress-step-number-active">1</div>
+                    <span class="step-number">Step 1</span>
+                    <span class="step-description"> YOUR INFO</span>
+                </div>
+                <div class="progress-step">
+                    <div class="progress-step-circle progress-step-number">2</div>
+                    <span class="step-number">Step 2</span>
+                    <span class="step-description">SELECT PLAN</span>
+                </div>
+                <div class="progress-step">
+                    <div class="progress-step-circle progress-step-number">3</div>
+                    <span class="step-number">Step 3</span>
+                    <span class="step-description"> ADD-ONS</span>
+                </div>
+                <div class="progress-step">
+                    <div class="progress-step-circle progress-step-number">4</div>
+                    <span class="step-number">Step 4</span>
+                    <span class="step-description">SUMMARY</span>
+                </div>
+                </div>
+            </div>
+
+            <div class="form-step-wrapper">
+
+            <!--Step 1-->
+                
+            <div class="form-step form-step1">
+                <h1 class="form-step-title">Personal info</h1>
+                <p class="form-step-description">Please provide your name, email address, and phone number</p>
+                <form>
+                    
+                <label for="name">Name</label>
+                
+                <input class="required-input" type="text" name="name" id="name" minlength="2"  required>
+                <p class="error">Please give your name</p>
+            
+                <label for="email">Email</label>
+               
+                <input class="required-input" type="text" name="email" id="email"  required>
+                <p class="error">Please give a valid email</p>
+
+                <label for="phone">Phone Number</label>
+                
+                <input class="required-input" type="text" name="phone" id="phone" required>
+                <p class="error">Please give a valid phone number</p>
+
+                </form>
+                <div class="btn-container"><input class="next-btn" type="submit" value="Next Step"></div>
+            
+            </div>
+
+            <!--Step 2-->
+
+            <div class="form-step form-step2" id="two">
+                <h1 class="form-step-title">Select Your Plan</h1>
+                <p class="form-step-description">Please provide your name, email address, and phone number</p>
+                <div class="card-row">
+                    <button class="card-wrapper">
+                        <img class="card-img" src="assets/icon-arcade.svg">
+                
+                        <h3 class="card-title">Arcade</h3>
+                        <p class="card-price">$9/mo</p>
+                        
+            
+                    </button>
+
+                    <button class="card-wrapper">
+                        <img class="card-img" src="assets/icon-advanced.svg">
+                
+                        <h3 class="card-title">Advanced</h3>
+                        <p class="card-price">$12/mo</p>
+                        
+            
+                    </button>
+
+                    <button class="card-wrapper">
+                        <img class="card-img" src="assets/icon-pro.svg">
+                
+                        <h3 class="card-title">Pro</h3>
+                        <p class="card-price">$15/mo</p>
+                        
+            
+                    </button>
+                </div>
+                <p class="plan-error">You must pick a plan</p>
+                <div class="toggle-switch-container">
+                    <span class="monthly">Monthly</span>
+                    <label class="switch">
+                        <input id="slider-check" type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                    <span class="yearly">Yearly</span>
+                </div>
+                <div class="btn-container">
+                    <a class="back-btn">Go Back</a>
+                <input class="next-btn" type="submit" value="Next Step"></div>
+            </div>
+
+                <!--Step 3-->
+
+                <div class="form-step form-step3">
+                    <h1 class="form-step-title">Pick Add-ons</h1>
+                    <p class="form-step-description">Add-ons help enhance your gaming experience</p>
+                    
+                    <div class="add-ons-wrapper">
+                        
+                            <label class="add-on-card" for="online">
+                                <input type="checkbox" name="online" id="online">
+                                <div class="plan-column">
+                                    <span class="add-on-title">Online Service</span>
+                                    <span class="add-on-description">Access to multiplayer games</span>
+                                </div>
+                                <span class="add-on-cost-per-month">+$1/mo</span>
+                            </label>
+
+                            <label class="add-on-card" for="online">
+                                <input type="checkbox" name="online" id="online">
+                                <div class="plan-column">
+                                    <span class="add-on-title">Larger storage</span>
+                                    <span class="add-on-description">Extra 1TB of cloud save</span>
+                                </div>
+                                <span class="add-on-cost-per-month">+2/mo</span>
+                            </label>
+
+                            <label class="add-on-card" for="online">
+                                <input type="checkbox" name="online" id="online">
+                                <div class="plan-column">
+                                    <span class="add-on-title">Customizable profile</span>
+                                    <span class="add-on-description">Custom theme on your profile</span>
+                                </div>
+                                <span class="add-on-cost-per-month">+$3/mo</span>
+                            </label>
+                        
+                    </div>
+                    <div class="btn-container">
+                        <a class="back-btn" >Go Back</a>  
+                        <input class="next-btn" type="submit" value="Next Step">
+                    </div>
+                </div><!--Form-step-->
+
+                <!--Step 4-->
+
+                <div class="form-step form-step4">
+                    <h1 class="form-step-title">Finishing up</h1>
+                    <p class="form-step-description">Double-check everything looks OK before confirming</p>
+                    
+                    
+                    <div class="confirm-services-wrapper">
+                        <div class="plan-selection-container">
+                            <h4 class="plan-selected">Arcade (Monthly)</h4>
+                            
+                        </div>
+                        <p class="plan-price">$9/mo</p>
+                        <hr>
+                        <div class="add-ons">
+                            <div class="add-on-container">
+                                <p class="add-on-services-selected"></p>
+                                <span class="add-on-service-price"></span>
+                            </div>
+                            <div class="add-on-container">
+                                <p class="add-on-services-selected"></p>
+                                <span class="add-on-service-price"></span>
+                            </div>
+                            
+                    </div>
+                   
+                    </div>
+                    <div class="total-wrapper">
+                        <span>Total</span>
+                    <span id="total-price">1</span>
+                    </div>
+                    <div class="btn-container">
+                        <a class="back-btn">Go Back</a> 
+                        <input class="next-btn" type="submit" value="Confirm">
+                    </div>
+                </div>
+
+                <!--Step 5-->
+
+                <div class="form-step form-step5">
+                    
+                    <img class="checkmark-img" src="assets/icon-thank-you.svg">
+                    <h1 class="final-step-h1">Thank You!</h1>
+                    <p class="confirmation-message">Thanks for confirming your subscription! We hope you 
+                        have fun using our platform. If you ever need support, 
+                        please feel free to email us at support@loremgaming.com.
+                    </p>
+                
+                </div>
+                
+                </div><!--Form step wrapper-->
+            </div><!--Form cotainer-->
+            
+
+        <script src="script.js"></script>
+    </body>
+</html>
